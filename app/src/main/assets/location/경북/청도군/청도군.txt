@@ -1,0 +1,59 @@
+{
+  "pageIsPrev": false,
+  "pageIsNext": false,
+  "arr": [
+    {
+      "RTLRID": "14710023",
+      "RTLRSTRTELNO": "054-373-3773",
+      "RECORDNO": 1,
+      "LATITUDE": 35.644539,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "고수리 478-153번지",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 128.741449,
+      "FIRMNM": "SKY정보통신",
+      "BPLCLOCPLC3": "청도읍",
+      "BPLCLOCPLC2": "청도군",
+      "BPLCLOCPLC1": "경북"
+    },
+    {
+      "RTLRID": "14720033",
+      "RTLRSTRTELNO": "054-373-8033",
+      "RECORDNO": 2,
+      "LATITUDE": 35.641481,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "송서리 577-8 CU편의점_풍각점",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 128.619442,
+      "FIRMNM": "로또풍각점",
+      "BPLCLOCPLC3": "풍각면",
+      "BPLCLOCPLC2": "청도군",
+      "BPLCLOCPLC1": "경북"
+    },
+    {
+      "RTLRID": "14710024",
+      "RTLRSTRTELNO": "054-371-5944",
+      "RECORDNO": 3,
+      "LATITUDE": 35.641807,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "고수리 825-1 복운당로또복권판매점",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 128.746491,
+      "FIRMNM": "복운당로또복권청도점",
+      "BPLCLOCPLC3": "청도읍",
+      "BPLCLOCPLC2": "청도군",
+      "BPLCLOCPLC1": "경북"
+    }
+  ],
+  "pageStart": 1,
+  "nowPage": 1,
+  "pageEnd": 1,
+  "totalPage": 1,
+  "sltSido2": ""
+}

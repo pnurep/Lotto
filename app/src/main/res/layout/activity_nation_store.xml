@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ahchim.android.ritto.NationStoreActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_navigator"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:orientation="horizontal"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_Navi"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:background="#ffff00"
+            android:gravity="center_vertical"
+            android:text=""
+            tools:text="지역별선택 > "
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:id="@+id/tv_Navi1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:background="#fff000"
+            android:gravity="center_vertical"
+            tools:text = "강원 > "
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:id="@+id/tv_Navi3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:textAppearance="@android:style/TextAppearance.Large" />
+
+        <TextView
+            android:id="@+id/tv_Navi2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:background="#ff0000"
+            tools:text="고성군 > " />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_location_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="0dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_navigator"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ListView
+            android:id="@+id/location_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,43 @@
+{
+  "pageIsPrev": false,
+  "pageIsNext": false,
+  "arr": [
+    {
+      "RTLRID": "14220004",
+      "RTLRSTRTELNO": "070-4120-9985",
+      "RECORDNO": 1,
+      "LATITUDE": 38.105654,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "상리 211-6 행운마트",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 127.986847,
+      "FIRMNM": "로또하기좋은날",
+      "BPLCLOCPLC3": "양구읍",
+      "BPLCLOCPLC2": "양구군",
+      "BPLCLOCPLC1": "강원"
+    },
+    {
+      "RTLRID": "14290038",
+      "RTLRSTRTELNO": "070-7798-5088",
+      "RECORDNO": 2,
+      "LATITUDE": 38.106325,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "상리 227-7",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 127.989117,
+      "FIRMNM": "토토군로또양",
+      "BPLCLOCPLC3": "양구읍",
+      "BPLCLOCPLC2": "양구군",
+      "BPLCLOCPLC1": "강원"
+    }
+  ],
+  "pageStart": 1,
+  "nowPage": 1,
+  "pageEnd": 1,
+  "totalPage": 1,
+  "sltSido2": ""
+}

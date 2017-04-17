@@ -1,0 +1,43 @@
+{
+  "pageIsPrev": false,
+  "pageIsNext": false,
+  "arr": [
+    {
+      "RTLRID": "14730010",
+      "RTLRSTRTELNO": "054-383-7666",
+      "RECORDNO": 1,
+      "LATITUDE": 36.237588,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "서부리 34-7 편의점_cu",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 128.566915,
+      "FIRMNM": "군위대박로또",
+      "BPLCLOCPLC3": "군위읍",
+      "BPLCLOCPLC2": "군위군",
+      "BPLCLOCPLC1": "경북"
+    },
+    {
+      "RTLRID": "14710181",
+      "RTLRSTRTELNO": "054-383-5942",
+      "RECORDNO": 2,
+      "LATITUDE": 36.231414,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "서부리 124-6번지",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 128.567499,
+      "FIRMNM": "로또복권",
+      "BPLCLOCPLC3": "군위읍",
+      "BPLCLOCPLC2": "군위군",
+      "BPLCLOCPLC1": "경북"
+    }
+  ],
+  "pageStart": 1,
+  "nowPage": 1,
+  "pageEnd": 1,
+  "totalPage": 1,
+  "sltSido2": ""
+}

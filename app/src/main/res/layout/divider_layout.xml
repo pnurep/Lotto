@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_container_divide"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5D5D5D"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:paddingLeft="10dp"
+        android:text="  Date : "
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#ffffff" />
+
+    <LinearLayout
+        android:id="@+id/ll_container_divide_inner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="7dp">
+
+        <CheckBox
+            android:id="@+id/check"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/num1_adapter"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@mipmap/ball_one"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/LottoBallsTextSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/num2_adapter"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@mipmap/ball_one"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/LottoBallsTextSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/num3_adapter"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@mipmap/ball_one"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/LottoBallsTextSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/num4_adapter"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@mipmap/ball_one"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/LottoBallsTextSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/num5_adapter"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@mipmap/ball_one"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/LottoBallsTextSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/num6_adapter"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@mipmap/ball_one"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/LottoBallsTextSize"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

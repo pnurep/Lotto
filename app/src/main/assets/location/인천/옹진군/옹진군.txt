@@ -1,0 +1,43 @@
+{
+  "pageIsPrev": false,
+  "pageIsNext": false,
+  "arr": [
+    {
+      "RTLRID": "12810031",
+      "RTLRSTRTELNO": "032-886-0523",
+      "RECORDNO": 1,
+      "LATITUDE": 37.254687,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "내리 8-165번지",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 126.496881,
+      "FIRMNM": "김영로또",
+      "BPLCLOCPLC3": "영흥면",
+      "BPLCLOCPLC2": "옹진군",
+      "BPLCLOCPLC1": "인천"
+    },
+    {
+      "RTLRID": "12820022",
+      "RTLRSTRTELNO": null,
+      "RECORDNO": 2,
+      "LATITUDE": 37.972043,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "진촌리 740-1번지",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 124.720613,
+      "FIRMNM": "백령로또",
+      "BPLCLOCPLC3": "백령면",
+      "BPLCLOCPLC2": "옹진군",
+      "BPLCLOCPLC1": "인천"
+    }
+  ],
+  "pageStart": 1,
+  "nowPage": 1,
+  "pageEnd": 1,
+  "totalPage": 1,
+  "sltSido2": ""
+}

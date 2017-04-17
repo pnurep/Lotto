@@ -1,0 +1,59 @@
+{
+  "pageIsPrev": false,
+  "pageIsNext": false,
+  "arr": [
+    {
+      "RTLRID": "14710178",
+      "RTLRSTRTELNO": "054-872-8271",
+      "RECORDNO": 1,
+      "LATITUDE": 36.433807,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "월막리 239-10번지",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 129.056017,
+      "FIRMNM": "행운로또청송점",
+      "BPLCLOCPLC3": "청송읍",
+      "BPLCLOCPLC2": "청송군",
+      "BPLCLOCPLC1": "경북"
+    },
+    {
+      "RTLRID": "14720034",
+      "RTLRSTRTELNO": "054-872-7837",
+      "RECORDNO": 2,
+      "LATITUDE": 36.529801,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "진안리 384-3 1층 CU 편의점 내",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 129.041144,
+      "FIRMNM": "행운로또",
+      "BPLCLOCPLC3": "진보면",
+      "BPLCLOCPLC2": "청송군",
+      "BPLCLOCPLC1": "경북"
+    },
+    {
+      "RTLRID": "14790034",
+      "RTLRSTRTELNO": "054-872-6348",
+      "RECORDNO": 3,
+      "LATITUDE": 36.528529,
+      "BPLCLOCPLC4": "진보면",
+      "BPLCLOCPLCDTLADRES": "진안리 126-2",
+      "DEAL645": "3",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 129.045826,
+      "FIRMNM": "진보복권",
+      "BPLCLOCPLC3": null,
+      "BPLCLOCPLC2": "청송군",
+      "BPLCLOCPLC1": "경북"
+    }
+  ],
+  "pageStart": 1,
+  "nowPage": 1,
+  "pageEnd": 1,
+  "totalPage": 1,
+  "sltSido2": ""
+}

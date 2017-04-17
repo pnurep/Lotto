@@ -1,0 +1,43 @@
+{
+  "pageIsPrev": false,
+  "pageIsNext": false,
+  "arr": [
+    {
+      "RTLRID": "14310063",
+      "RTLRSTRTELNO": "043-422-2151",
+      "RECORDNO": 1,
+      "LATITUDE": 36.984959,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "별곡리 331",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 128.369061,
+      "FIRMNM": "복권천국",
+      "BPLCLOCPLC3": "단양읍",
+      "BPLCLOCPLC2": "단양군",
+      "BPLCLOCPLC1": "충북"
+    },
+    {
+      "RTLRID": "14320002",
+      "RTLRSTRTELNO": "043-422-6566",
+      "RECORDNO": 2,
+      "LATITUDE": 36.977126,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "상진리 791번지 CU단양상진점",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 128.356944,
+      "FIRMNM": "복권판매점",
+      "BPLCLOCPLC3": "단양읍",
+      "BPLCLOCPLC2": "단양군",
+      "BPLCLOCPLC1": "충북"
+    }
+  ],
+  "pageStart": 1,
+  "nowPage": 1,
+  "pageEnd": 1,
+  "totalPage": 1,
+  "sltSido2": ""
+}

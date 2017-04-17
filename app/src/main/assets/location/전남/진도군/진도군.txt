@@ -1,0 +1,27 @@
+{
+  "pageIsPrev": false,
+  "pageIsNext": false,
+  "arr": [
+    {
+      "RTLRID": "14620024",
+      "RTLRSTRTELNO": "010-2111-5646",
+      "RECORDNO": 1,
+      "LATITUDE": 34.481301,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "동외리 1151-2 진도로또",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 126.269331,
+      "FIRMNM": "진도로또",
+      "BPLCLOCPLC3": "진도읍",
+      "BPLCLOCPLC2": "진도군",
+      "BPLCLOCPLC1": "전남"
+    }
+  ],
+  "pageStart": 1,
+  "nowPage": 1,
+  "pageEnd": 1,
+  "totalPage": 1,
+  "sltSido2": ""
+}

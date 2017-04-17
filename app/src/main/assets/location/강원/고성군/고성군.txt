@@ -1,0 +1,43 @@
+{
+  "pageIsPrev": false,
+  "pageIsNext": false,
+  "arr": [
+    {
+      "RTLRID": "14210036",
+      "RTLRSTRTELNO": "033-682-2723",
+      "RECORDNO": 1,
+      "LATITUDE": 38.446224,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "거진리 304-6번지",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 128.453758,
+      "FIRMNM": "거진터미널로또복권판매점",
+      "BPLCLOCPLC3": "거진읍",
+      "BPLCLOCPLC2": "고성군",
+      "BPLCLOCPLC1": "강원"
+    },
+    {
+      "RTLRID": "14220001",
+      "RTLRSTRTELNO": "033-681-2233",
+      "RECORDNO": 2,
+      "LATITUDE": 38.379104,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "신안리 250-1번지",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 128.472396,
+      "FIRMNM": "행운복권",
+      "BPLCLOCPLC3": "간성읍",
+      "BPLCLOCPLC2": "고성군",
+      "BPLCLOCPLC1": "강원"
+    }
+  ],
+  "pageStart": 1,
+  "nowPage": 1,
+  "pageEnd": 1,
+  "totalPage": 1,
+  "sltSido2": ""
+}

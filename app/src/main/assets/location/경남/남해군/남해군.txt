@@ -1,0 +1,59 @@
+{
+  "pageIsPrev": false,
+  "pageIsNext": false,
+  "arr": [
+    {
+      "RTLRID": "14810156",
+      "RTLRSTRTELNO": "055-862-8665",
+      "RECORDNO": 1,
+      "LATITUDE": 34.838298,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "북변리 212-3번지 1층 CU편의점 내",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 127.895186,
+      "FIRMNM": "로또",
+      "BPLCLOCPLC3": "남해읍",
+      "BPLCLOCPLC2": "남해군",
+      "BPLCLOCPLC1": "경남"
+    },
+    {
+      "RTLRID": "14830058",
+      "RTLRSTRTELNO": "055-864-8585",
+      "RECORDNO": 2,
+      "LATITUDE": 34.833356,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "남변리 500-3 홈마트 내",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 127.89746,
+      "FIRMNM": "대박로또",
+      "BPLCLOCPLC3": "남해읍",
+      "BPLCLOCPLC2": "남해군",
+      "BPLCLOCPLC1": "경남"
+    },
+    {
+      "RTLRID": "14810112",
+      "RTLRSTRTELNO": "055-863-4322",
+      "RECORDNO": 3,
+      "LATITUDE": 34.838021,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "북변리 125-15번지 1층 CU편의점 내",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 127.893958,
+      "FIRMNM": "남해복권",
+      "BPLCLOCPLC3": "남해읍",
+      "BPLCLOCPLC2": "남해군",
+      "BPLCLOCPLC1": "경남"
+    }
+  ],
+  "pageStart": 1,
+  "nowPage": 1,
+  "pageEnd": 1,
+  "totalPage": 1,
+  "sltSido2": ""
+}

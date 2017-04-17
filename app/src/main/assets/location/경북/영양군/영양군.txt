@@ -1,0 +1,59 @@
+{
+  "pageIsPrev": false,
+  "pageIsNext": false,
+  "arr": [
+    {
+      "RTLRID": "14710115",
+      "RTLRSTRTELNO": "054-682-6450",
+      "RECORDNO": 1,
+      "LATITUDE": 36.664303,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "서부리 237-3번지",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 129.113852,
+      "FIRMNM": "일화로또",
+      "BPLCLOCPLC3": "영양읍",
+      "BPLCLOCPLC2": "영양군",
+      "BPLCLOCPLC1": "경북"
+    },
+    {
+      "RTLRID": "14720026",
+      "RTLRSTRTELNO": "054-682-2756",
+      "RECORDNO": 2,
+      "LATITUDE": 36.663964,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "서부리 173-1",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 129.117513,
+      "FIRMNM": "희망나눔로또",
+      "BPLCLOCPLC3": "영양읍",
+      "BPLCLOCPLC2": "영양군",
+      "BPLCLOCPLC1": "경북"
+    },
+    {
+      "RTLRID": "14710185",
+      "RTLRSTRTELNO": "054-683-1108",
+      "RECORDNO": 3,
+      "LATITUDE": 36.665325,
+      "BPLCLOCPLC4": "영양읍",
+      "BPLCLOCPLCDTLADRES": "서부리 320-7",
+      "DEAL645": "3",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 129.115739,
+      "FIRMNM": "상품대리(로또영양판매)",
+      "BPLCLOCPLC3": null,
+      "BPLCLOCPLC2": "영양군",
+      "BPLCLOCPLC1": "경북"
+    }
+  ],
+  "pageStart": 1,
+  "nowPage": 1,
+  "pageEnd": 1,
+  "totalPage": 1,
+  "sltSido2": ""
+}

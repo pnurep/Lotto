@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="로또번호 만들기">
+        <!--<include menu="@menu/generate_number"/> 이거안됨.. 왜안된대;ㅅ;-->
+        <!--<menu app:menu="@menu/generate_number"/> 심지어 이건 에러안나는데 표시가 안됨.-->
+        <menu>
+            <item
+                android:id="@+id/action_random_number"
+                android:title="번호 자동생성"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/action_input_number"
+                android:title="번호 직접입력"
+                app:showAsAction="never" />
+
+        </menu>
+    </item>
+
+    <item android:title="로또번호 목록">
+        <menu>
+            <item
+                android:id="@+id/action_generated_numbers"
+                android:title="만든 번호 목록"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/action_past_winning_numbers"
+                android:title="지난 당첨번호"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/action_purchased_numbers"
+                android:title="구입 번호 목록 &amp; 당첨확인"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+    <item android:title="로또 판매점">
+        <menu>
+            <item
+                android:id="@+id/action_store_around"
+                android:title="주변 판매점"
+                app:showAsAction="never" />
+
+            <item
+                android:id="@+id/action_store_nationwide"
+                android:title="전국 판매점"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+</menu>

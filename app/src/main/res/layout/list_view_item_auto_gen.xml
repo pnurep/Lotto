@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_container_autogen"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:layout_gravity="center"
+    android:padding="7dp"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_vertical"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/num1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@mipmap/ball_one"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/LottoBallsTextSize"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/num2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@mipmap/ball_one"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/LottoBallsTextSize"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/num3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@mipmap/ball_one"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/LottoBallsTextSize"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/num4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@mipmap/ball_one"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/LottoBallsTextSize"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/num5"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@mipmap/ball_one"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/LottoBallsTextSize"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/num6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@mipmap/ball_one"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/LottoBallsTextSize"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

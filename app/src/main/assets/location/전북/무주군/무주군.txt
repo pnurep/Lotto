@@ -1,0 +1,59 @@
+{
+  "pageIsPrev": false,
+  "pageIsNext": false,
+  "arr": [
+    {
+      "RTLRID": "14510001",
+      "RTLRSTRTELNO": "063-322-6450",
+      "RECORDNO": 1,
+      "LATITUDE": 36.00776,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "읍내리 249-4번지",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 127.663021,
+      "FIRMNM": "반딧불로또",
+      "BPLCLOCPLC3": "무주읍",
+      "BPLCLOCPLC2": "무주군",
+      "BPLCLOCPLC1": "전북"
+    },
+    {
+      "RTLRID": "14520006",
+      "RTLRSTRTELNO": "063-322-1916",
+      "RECORDNO": 2,
+      "LATITUDE": 36.009567,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "읍내리 236-7",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 127.666677,
+      "FIRMNM": "반디로또",
+      "BPLCLOCPLC3": "무주읍",
+      "BPLCLOCPLC2": "무주군",
+      "BPLCLOCPLC1": "전북"
+    },
+    {
+      "RTLRID": "14510002",
+      "RTLRSTRTELNO": "063-322-1132",
+      "RECORDNO": 3,
+      "LATITUDE": 35.905637,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "삼공리 366-3번지",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 127.780902,
+      "FIRMNM": "로또복권",
+      "BPLCLOCPLC3": "설천면",
+      "BPLCLOCPLC2": "무주군",
+      "BPLCLOCPLC1": "전북"
+    }
+  ],
+  "pageStart": 1,
+  "nowPage": 1,
+  "pageEnd": 1,
+  "totalPage": 1,
+  "sltSido2": ""
+}

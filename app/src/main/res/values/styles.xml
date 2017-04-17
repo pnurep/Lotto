@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--<item name="android:textViewStyle">@style/RobotoTextViewStyle</item>-->
+        <!--<item name="buttonStyle">@style/RobotoButtonStyle</item>-->
+
+        <!--<item name="textColorPrimary">@color/textColorPrimary</item>-->
+        <!--<item name="textColorSecondary">@color/textColorSecondary</item>-->
+    </style>
+
+    <!--<style name="RobotoTextViewStyle" parent="android:Widget.TextView">-->
+        <!--<item name="android:fontFamily">roboto</item>-->
+    <!--</style>-->
+
+    <!--<style name="RobotoButtonStyle" parent="android:Widget.Holo.Button">-->
+        <!--<item name="android:fontFamily">roboto</item>-->
+    <!--</style>-->
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="colorPrimary">@android:color/transparent</item> <!-- ActionBar 색깔이 Primary니까 이런 꼼수를..! 어차피 @color 값은 그대로니까. -->
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TransparentToolbar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:windowActionBarOverlay">true</item>
+        <!-- Support Library compability -->
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+
+</resources>

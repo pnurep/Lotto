@@ -1,0 +1,43 @@
+{
+  "pageIsPrev": false,
+  "pageIsNext": false,
+  "arr": [
+    {
+      "RTLRID": "14320001",
+      "RTLRSTRTELNO": "043-832-7930",
+      "RECORDNO": 1,
+      "LATITUDE": 36.809247,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "동부리 667-16 cu편의점 내",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 127.792592,
+      "FIRMNM": "나눔로또",
+      "BPLCLOCPLC3": "괴산읍",
+      "BPLCLOCPLC2": "괴산군",
+      "BPLCLOCPLC1": "충북"
+    },
+    {
+      "RTLRID": "14310061",
+      "RTLRSTRTELNO": "043-833-8959",
+      "RECORDNO": 2,
+      "LATITUDE": 36.807731,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "동부리 658-13번지",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 127.793449,
+      "FIRMNM": "로또",
+      "BPLCLOCPLC3": "괴산읍",
+      "BPLCLOCPLC2": "괴산군",
+      "BPLCLOCPLC1": "충북"
+    }
+  ],
+  "pageStart": 1,
+  "nowPage": 1,
+  "pageEnd": 1,
+  "totalPage": 1,
+  "sltSido2": ""
+}

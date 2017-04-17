@@ -1,0 +1,59 @@
+{
+  "pageIsPrev": false,
+  "pageIsNext": false,
+  "arr": [
+    {
+      "RTLRID": "14510111",
+      "RTLRSTRTELNO": "063-351-0998",
+      "RECORDNO": 1,
+      "LATITUDE": 35.73101,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "장계리 351-8번지",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 127.583616,
+      "FIRMNM": "복조리복권방",
+      "BPLCLOCPLC3": "장계면",
+      "BPLCLOCPLC2": "장수군",
+      "BPLCLOCPLC1": "전북"
+    },
+    {
+      "RTLRID": "14520012",
+      "RTLRSTRTELNO": "063-351-6790",
+      "RECORDNO": 2,
+      "LATITUDE": 35.646633,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "장수리 514-3번지",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 127.518435,
+      "FIRMNM": "대박로또방",
+      "BPLCLOCPLC3": "장수읍",
+      "BPLCLOCPLC2": "장수군",
+      "BPLCLOCPLC1": "전북"
+    },
+    {
+      "RTLRID": "14510112",
+      "RTLRSTRTELNO": "063-351-1717",
+      "RECORDNO": 3,
+      "LATITUDE": 35.648826,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "장수리 277-1번지",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 127.520717,
+      "FIRMNM": "로또판매점",
+      "BPLCLOCPLC3": "장수읍",
+      "BPLCLOCPLC2": "장수군",
+      "BPLCLOCPLC1": "전북"
+    }
+  ],
+  "pageStart": 1,
+  "nowPage": 1,
+  "pageEnd": 1,
+  "totalPage": 1,
+  "sltSido2": ""
+}

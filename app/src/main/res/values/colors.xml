@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFC107</color>
+    <color name="colorPrimaryDark">#FFA000</color>
+    <color name="colorPrimaryLight">#FFECB3</color>
+    <color name="colorAccent">#E74C3C</color>
+    <color name="ballColorOne">#E0E0E0</color>
+    <color name="ballColorTwo">#3498DB</color>
+    <color name="ballColorThree">#E74C3C</color>
+    <color name="ballColorFour">#8E44AD</color>
+    <color name="ballColorFive">#2BE307</color>
+</resources>

@@ -1,0 +1,43 @@
+{
+  "pageIsPrev": false,
+  "pageIsNext": false,
+  "arr": [
+    {
+      "RTLRID": "14710090",
+      "RTLRSTRTELNO": "054-791-5919",
+      "RECORDNO": 1,
+      "LATITUDE": 37.48873,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "도동리 12-9번지",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 130.91294,
+      "FIRMNM": "케불카매점",
+      "BPLCLOCPLC3": "울릉읍",
+      "BPLCLOCPLC2": "울릉군",
+      "BPLCLOCPLC1": "경북"
+    },
+    {
+      "RTLRID": "14710091",
+      "RTLRSTRTELNO": "054-791-8100",
+      "RECORDNO": 2,
+      "LATITUDE": 37.497565,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "도동리 330-4번지",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 130.908198,
+      "FIRMNM": "울릉로또",
+      "BPLCLOCPLC3": "울릉읍",
+      "BPLCLOCPLC2": "울릉군",
+      "BPLCLOCPLC1": "경북"
+    }
+  ],
+  "pageStart": 1,
+  "nowPage": 1,
+  "pageEnd": 1,
+  "totalPage": 1,
+  "sltSido2": ""
+}

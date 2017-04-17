@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/Gold/Desktop/FastCampus/team_project/source/ritto/app/libs/libDaumMapAndroid.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b365841bba8bc2d592e4b22008885a6f0cd1c77d">
+        <dex dex="/Users/Gold/Desktop/FastCampus/team_project/source/ritto/app/build/intermediates/pre-dexed/debug/libDaumMapAndroid_d72b4df4567ef5e866a0b16a256830b018fddb35.jar" />
+    </item>
+
+</items>

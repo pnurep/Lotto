@@ -1,0 +1,43 @@
+{
+  "pageIsPrev": false,
+  "pageIsNext": false,
+  "arr": [
+    {
+      "RTLRID": "14830059",
+      "RTLRSTRTELNO": "010-9369-2583",
+      "RECORDNO": 1,
+      "LATITUDE": 35.303285,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "하정리 749-15 1층",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 127.97188,
+      "FIRMNM": "담지",
+      "BPLCLOCPLC3": "신안면",
+      "BPLCLOCPLC2": "산청군",
+      "BPLCLOCPLC1": "경남"
+    },
+    {
+      "RTLRID": "14810123",
+      "RTLRSTRTELNO": "055-973-2201",
+      "RECORDNO": 2,
+      "LATITUDE": 35.41663,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "산청리 193-13번지",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 127.878336,
+      "FIRMNM": "고봉로또",
+      "BPLCLOCPLC3": "산청읍",
+      "BPLCLOCPLC2": "산청군",
+      "BPLCLOCPLC1": "경남"
+    }
+  ],
+  "pageStart": 1,
+  "nowPage": 1,
+  "pageEnd": 1,
+  "totalPage": 1,
+  "sltSido2": ""
+}

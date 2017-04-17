@@ -1,0 +1,59 @@
+{
+  "pageIsPrev": false,
+  "pageIsNext": false,
+  "arr": [
+    {
+      "RTLRID": "14890025",
+      "RTLRSTRTELNO": "055-572-0505",
+      "RECORDNO": 1,
+      "LATITUDE": 35.318832,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "중동리 386-17번지",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 128.262253,
+      "FIRMNM": "해피데이복권방",
+      "BPLCLOCPLC3": "의령읍",
+      "BPLCLOCPLC2": "의령군",
+      "BPLCLOCPLC1": "경남"
+    },
+    {
+      "RTLRID": "14830052",
+      "RTLRSTRTELNO": null,
+      "RECORDNO": 2,
+      "LATITUDE": 35.31923,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "동동리 981 1층",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 128.26807,
+      "FIRMNM": "도담",
+      "BPLCLOCPLC3": "의령읍",
+      "BPLCLOCPLC2": "의령군",
+      "BPLCLOCPLC1": "경남"
+    },
+    {
+      "RTLRID": "14810012",
+      "RTLRSTRTELNO": "055-574-6215",
+      "RECORDNO": 3,
+      "LATITUDE": 35.464373,
+      "BPLCLOCPLC4": null,
+      "BPLCLOCPLCDTLADRES": "신반리 160-2번지",
+      "DEAL645": "1",
+      "DEALSPEETO": "N",
+      "DEAL520": "N",
+      "LONGITUDE": 128.321451,
+      "FIRMNM": "동신상회",
+      "BPLCLOCPLC3": "부림면",
+      "BPLCLOCPLC2": "의령군",
+      "BPLCLOCPLC1": "경남"
+    }
+  ],
+  "pageStart": 1,
+  "nowPage": 1,
+  "pageEnd": 1,
+  "totalPage": 1,
+  "sltSido2": ""
+}
