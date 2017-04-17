@@ -130,7 +130,6 @@ public class GenNumList_Adapter extends BaseAdapter {
 
         divider.setText(results.get(position).getDate());
 
-
         Log.e("date", "=======================" + date);
         Log.e("getdate", "=======================" + results.get(position).getDate());
         Log.e("visibility", "=======================" + results.get(position).getShow());
