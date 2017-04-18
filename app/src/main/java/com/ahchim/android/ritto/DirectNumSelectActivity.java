@@ -36,7 +36,7 @@ public class DirectNumSelectActivity extends AppCompatActivity {
     int a = 1;
     int numSelectCounter = 0;
 
-    ArrayList<Integer> selectedNumberList = new ArrayList<>();
+    ArrayList<Integer> selectedNumberList;
 
     LinearLayout linearLayout, linearLayout1, ll_select_result;
     TextView lottoNum1, textView5;
@@ -69,6 +69,8 @@ public class DirectNumSelectActivity extends AppCompatActivity {
         }
 
         setContentView(R.layout.activity_direct_num_select);
+
+        selectedNumberList = new ArrayList<>();
 
         btnSelect = (Button) findViewById(R.id.btnSelect_direct);
         linearLayout = (LinearLayout) findViewById(R.id.direct_ll);

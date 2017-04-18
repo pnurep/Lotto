@@ -3,6 +3,15 @@
 
     <item
         is-multidex="false"
+        jar="/Users/Gold/.android/build-cache/f0f179e0336d7acd7f75a0becc5b713540029570/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3cef25b344d6893e5e2d9b1ae38d180955e9d3ef">
+        <dex dex="/Users/Gold/Desktop/FastCampus/team_project/source/ritto/app/build/intermediates/pre-dexed/debug/classes_1036f335f834f6745c5084bdb7e4a60b405078f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/Gold/Desktop/FastCampus/team_project/source/ritto/app/libs/libDaumMapAndroid.jar"
         jumboMode="false"
         optimize="true"

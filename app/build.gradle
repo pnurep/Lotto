@@ -49,4 +49,5 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
     testCompile 'junit:junit:4.12'
     compile 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    compile 'com.github.aakira:expandable-layout:1.6.0@aar'
 }

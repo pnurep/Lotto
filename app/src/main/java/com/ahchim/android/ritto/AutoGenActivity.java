@@ -43,12 +43,12 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
     public static int REQUEST_CODE_1 = 100;
     public static int REQUEST_CODE_2 = 200;
 
-    public static ArrayList<Integer> selectedNumber = new ArrayList<>();
-    public static ArrayList<Integer> exceptNumber = new ArrayList<>();
+    public static ArrayList<Integer> selectedNumber;
+    public static ArrayList<Integer> exceptNumber;
     ArrayList<Integer> generatedNumber;
 
-    ArrayList<ArrayList<Integer>> allGeneratedNumber = new ArrayList<>();
-    ArrayList<ArrayList<Integer>> goToSaveNumber = new ArrayList<>();
+    ArrayList<ArrayList<Integer>> allGeneratedNumber;
+    ArrayList<ArrayList<Integer>> goToSaveNumber;
 
     Ascending ascending;
 
@@ -71,6 +71,11 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
         }
 
         setContentView(R.layout.activity_auto_gen);
+
+        selectedNumber = new ArrayList<>();
+        exceptNumber = new ArrayList<>();
+        allGeneratedNumber = new ArrayList<>();
+        goToSaveNumber = new ArrayList<>();
 
         ll_inner_container = (LinearLayout) findViewById(R.id.ll_inner_container);
         ll_inner_container_except = (LinearLayout) findViewById(R.id.ll_inner_container_except);
