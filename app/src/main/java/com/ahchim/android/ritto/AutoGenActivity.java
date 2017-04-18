@@ -43,8 +43,8 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
     public static int REQUEST_CODE_1 = 100;
     public static int REQUEST_CODE_2 = 200;
 
-    ArrayList<Integer> selectedNumber = new ArrayList<>();
-    ArrayList<Integer> exceptNumber = new ArrayList<>();
+    public static ArrayList<Integer> selectedNumber = new ArrayList<>();
+    public static ArrayList<Integer> exceptNumber = new ArrayList<>();
     ArrayList<Integer> generatedNumber;
 
     ArrayList<ArrayList<Integer>> allGeneratedNumber = new ArrayList<>();
@@ -101,23 +101,26 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         Intent intent;
         switch (v.getId()){
-            case R.id.btnSelect :
+            case R.id.btnSelect : //포함하고 싶은 숫자
                 intent = new Intent(AutoGenActivity.this, DirectNumSelectActivity.class);
                 intent.putExtra("REQUEST_CODE", REQUEST_CODE_1);
                 startActivityForResult(intent, REQUEST_CODE_1);
                 break;
-            case R.id.btnSelect2 :
+            case R.id.btnSelect2 : //제외하고 싶은 숫자
                 intent = new Intent(AutoGenActivity.this, DirectNumSelectActivity.class);
                 intent.putExtra("REQUEST_CODE", REQUEST_CODE_2);
                 startActivityForResult(intent, REQUEST_CODE_2);
                 break;
 
             case R.id.btnSave :
-                if(goToSaveNumber != null){
+                if(goToSaveNumber.size() > 0){
                     saveGenNum(goToSaveNumber);
-                    Toast.makeText(this, "선택한 번호가 저장되었습니다!", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(this, "번호를 생성해 주세요!", Toast.LENGTH_SHORT).show();
+                    if(allGeneratedNumber.size() <= 0){
+                        Toast.makeText(this, "번호를 생성해 주세요!", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(this, "번호를 선택해 주세요!", Toast.LENGTH_SHORT).show();
+                    }
                 }
                 break;
 
@@ -197,6 +200,7 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
         //super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == 100 && resultCode == Activity.RESULT_OK){
             ll_inner_container.removeAllViewsInLayout();
+            selectedNumber.clear();
             selectedNumber = (ArrayList<Integer>) data.getSerializableExtra("result");
             Log.e("잘 받았디?","=================" + selectedNumber);
             Collections.sort(selectedNumber, ascending);
@@ -206,6 +210,7 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
 
         } else if(requestCode == 200 && resultCode == Activity.RESULT_OK) {
             ll_inner_container_except.removeAllViewsInLayout();
+            exceptNumber.clear();
             exceptNumber = (ArrayList<Integer>) data.getSerializableExtra("result");
             Log.e("잘 받았디?","=================" + exceptNumber);
             Collections.sort(selectedNumber, ascending);
@@ -377,36 +382,44 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
     //만든번호 저장
     public void saveGenNum(ArrayList<ArrayList<Integer>> arrayList){
 
-        realm.beginTransaction();
+        if(allGeneratedNumber != null){
+            realm.beginTransaction();
 
-        for(ArrayList<Integer> item : arrayList){
-            Log.e("item","================" + item);
+            for(ArrayList<Integer> item : arrayList){
+                Log.e("item","================" + item);
 
-            SavedNumber savedNumber = realm.createObject(SavedNumber.class);
+                SavedNumber savedNumber = realm.createObject(SavedNumber.class);
 
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.KOREA);
-            String currentDateTimeString = dateFormat.format(new Date());
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.KOREA);
+                String currentDateTimeString = dateFormat.format(new Date());
 
-            savedNumber.setDate(currentDateTimeString);
-            savedNumber.setNum1(item.get(0));
-            savedNumber.setNum2(item.get(1));
-            savedNumber.setNum3(item.get(2));
-            savedNumber.setNum4(item.get(3));
-            savedNumber.setNum5(item.get(4));
-            savedNumber.setNum6(item.get(5));
+                savedNumber.setDate(currentDateTimeString);
+                savedNumber.setNum1(item.get(0));
+                savedNumber.setNum2(item.get(1));
+                savedNumber.setNum3(item.get(2));
+                savedNumber.setNum4(item.get(3));
+                savedNumber.setNum5(item.get(4));
+                savedNumber.setNum6(item.get(5));
 
-            Log.e("현재날짜", "======================" + currentDateTimeString);
-            Log.e("getNumber","================" + savedNumber.getNum1());
-            Log.e("getNumber","================" + savedNumber.getNum2());
-            Log.e("getNumber","================" + savedNumber.getNum3());
-            Log.e("getNumber","================" + savedNumber.getNum4());
-            Log.e("getNumber","================" + savedNumber.getNum5());
-            Log.e("getNumber","================" + savedNumber.getNum6());
+                Log.e("현재날짜", "======================" + currentDateTimeString);
+                Log.e("getNumber","================" + savedNumber.getNum1());
+                Log.e("getNumber","================" + savedNumber.getNum2());
+                Log.e("getNumber","================" + savedNumber.getNum3());
+                Log.e("getNumber","================" + savedNumber.getNum4());
+                Log.e("getNumber","================" + savedNumber.getNum5());
+                Log.e("getNumber","================" + savedNumber.getNum6());
+            }
+            realm.commitTransaction();
         }
+    }
 
-        realm.commitTransaction();
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
         realm.close();
-
+        selectedNumber.clear();
+        exceptNumber.clear();
     }
 
     //제네레이트 된 번호들을 모은다. 최대 5개    -->  개 뻘짓의 산물

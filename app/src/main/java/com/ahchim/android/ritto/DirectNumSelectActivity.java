@@ -83,12 +83,17 @@ public class DirectNumSelectActivity extends AppCompatActivity {
             switchLimit = 6;
         } else if (REQUEST_CODE_DIRECT == 100 || REQUEST_CODE_DIRECT == 200) {
             btnSelect.setText("선택완료");
-            textView5.setText("  포함할 번호를 선택하세요. (최대 5개)");
+            if(REQUEST_CODE_DIRECT == 100){
+                textView5.setText("  포함할 번호를 선택하세요. (최대 5개)");
+            } else {
+                textView5.setText("  제외할 번호를 선택하세요. (최대 5개)");
+            }
             ll_select_result.setVisibility(View.GONE);
             switchLimit = 5;
         }
 
         viewInit();
+        setBallDoNotClick();
 
         realm = Realm.getDefaultInstance();
         ascending = new Ascending();
@@ -158,51 +163,18 @@ public class DirectNumSelectActivity extends AppCompatActivity {
 
                         switch (((TextView) v).getPaintFlags()) {
                             case 0:
-                                if (numSelectCounter < switchLimit) {
-                                    if (v.getId() < 11) {
-                                        v.setBackgroundResource(R.mipmap.ball_one);
-                                        v.setTag(R.mipmap.ball_one);
-                                    } else if (v.getId() < 21) {
-                                        v.setBackgroundResource(R.mipmap.ball_two);
-                                        v.setTag(R.mipmap.ball_two);
-                                    } else if (v.getId() < 31) {
-                                        v.setBackgroundResource(R.mipmap.ball_three);
-                                        v.setTag(R.mipmap.ball_three);
-                                    } else if (v.getId() < 41) {
-                                        v.setBackgroundResource(R.mipmap.ball_four);
-                                        v.setTag(R.mipmap.ball_four);
-                                    } else {
-                                        v.setBackgroundResource(R.mipmap.ball_five);
-                                        v.setTag(R.mipmap.ball_five);
-                                    }
-                                    ((TextView) v).setPaintFlags(1);
-                                    numSelectCounter = numSelectCounter + 1;
-                                    selectedNumberList.add(v.getId());
-
-                                    TextView selectedTV = new TextView(DirectNumSelectActivity.this);
-                                    selectedTV.setId(v.getId());
-                                    selectedTV.setText(((TextView) v).getText().toString());
-                                    selectedTV.setGravity(Gravity.CENTER);
-                                    selectedTV.setTextSize(20);
-                                    selectedTV.setTextColor(Color.WHITE);
-                                    selectedTV.setBackgroundResource((Integer) v.getTag());
-                                    selectedTV.setTypeface(Typeface.DEFAULT_BOLD);
-
-                                    ll_select_result.addView(selectedTV);
-
-                                } else {
-                                    Toast.makeText(DirectNumSelectActivity.this, switchLimit + "개까지만 선택 가능해요!", Toast.LENGTH_SHORT).show();
-                                }
+                                colorDistinction(v);
                                 break;
-
                             case 1:
                                 v.setBackgroundResource(R.mipmap.ball_unselect);
                                 ((TextView) v).setPaintFlags(0);
                                 numSelectCounter = numSelectCounter - 1;
                                 selectedNumberList.remove((Object) v.getId()); //오브젝트 타입으로 바꿔주어야 인덱스로 삭제하는게 아닌 값으로 삭제를 할 수 있다.
-
-                                ll_select_result.removeView(findViewById(v.getId()));
-
+                                Log.e("selectedNumberList","====" + selectedNumberList);
+                                ll_select_result.removeView(ll_select_result.findViewById(v.getId()));
+                                break;
+                            case 3 :
+                                Toast.makeText(DirectNumSelectActivity.this, "이미 포함되거나 제외된 수 입니다", Toast.LENGTH_SHORT).show();
                                 break;
                         }
                     }
@@ -215,7 +187,7 @@ public class DirectNumSelectActivity extends AppCompatActivity {
                     Log.e("a는?", "=============" + a);
                 }
                 if (j == 43) {
-                    linearLayout1.setPadding(105, 0, 0, 0);
+                    linearLayout1.setPadding(133, 0, 0, 0);
                 }
                 if (j >= 43) {
                     linearLayout1.setGravity(Gravity.LEFT);
@@ -243,8 +215,8 @@ public class DirectNumSelectActivity extends AppCompatActivity {
                     if (numSelectCounter < 6) {
                         Toast.makeText(DirectNumSelectActivity.this, "6개 다 채웠는감??", Toast.LENGTH_SHORT).show();
                     } else {
-                        realm.beginTransaction();
 
+                        realm.beginTransaction();
                         SavedNumber savedNumber = realm.createObject(SavedNumber.class);
                         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.KOREA);
                         String currentDateTimeString = simpleDateFormat.format(new Date());
@@ -257,20 +229,96 @@ public class DirectNumSelectActivity extends AppCompatActivity {
                         savedNumber.setNum4(selectedNumberList.get(3));
                         savedNumber.setNum5(selectedNumberList.get(4));
                         savedNumber.setNum6(selectedNumberList.get(5));
-                        realm.commitTransaction();
-                        realm.close();
+
                         Toast.makeText(DirectNumSelectActivity.this, "번호가 저장되었습니다!", Toast.LENGTH_SHORT).show();
 
+                        realm.commitTransaction();
+
                         //저장후 뷰들의 초기화
-                        selectedNumberList = new ArrayList<>();
-                        linearLayout.removeAllViewsInLayout();
-
-                        viewInit();
-
-
+                        ll_select_result.removeAllViewsInLayout();
+                        setUnclicked();
+                        selectedNumberList.clear();
+                        numSelectCounter = 0;
+                        Log.e("selectedNumberList","저장후" + selectedNumberList);
                     }
                 }
             }
         });
+    }
+
+    public void colorDistinction(View v) {
+        if (numSelectCounter < switchLimit) {
+            if (v.getId() < 11) {
+                v.setBackgroundResource(R.mipmap.ball_one);
+                v.setTag(R.mipmap.ball_one);
+            } else if (v.getId() < 21) {
+                v.setBackgroundResource(R.mipmap.ball_two);
+                v.setTag(R.mipmap.ball_two);
+            } else if (v.getId() < 31) {
+                v.setBackgroundResource(R.mipmap.ball_three);
+                v.setTag(R.mipmap.ball_three);
+            } else if (v.getId() < 41) {
+                v.setBackgroundResource(R.mipmap.ball_four);
+                v.setTag(R.mipmap.ball_four);
+            } else {
+                v.setBackgroundResource(R.mipmap.ball_five);
+                v.setTag(R.mipmap.ball_five);
+            }
+            ((TextView) v).setPaintFlags(1);
+            numSelectCounter = numSelectCounter + 1;
+            selectedNumberList.add(v.getId());
+
+            TextView selectedTV = new TextView(DirectNumSelectActivity.this);
+            selectedTV.setId(v.getId());
+            selectedTV.setText(((TextView) v).getText().toString());
+            selectedTV.setGravity(Gravity.CENTER);
+            selectedTV.setTextSize(20);
+            selectedTV.setTextColor(Color.WHITE);
+            selectedTV.setBackgroundResource((Integer) v.getTag());
+            selectedTV.setTypeface(Typeface.DEFAULT_BOLD);
+
+            ll_select_result.addView(selectedTV);
+
+        } else {
+            Toast.makeText(DirectNumSelectActivity.this, switchLimit + "개까지만 선택 가능해요!", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    public void setUnclicked() {
+        for(int i=0; i<6; i++){
+            TextView foundView = (TextView) linearLayout.findViewById(selectedNumberList.get(i));
+            foundView.setBackgroundResource(R.mipmap.ball_unselect);
+            foundView.setPaintFlags(0);
+        }
+    }
+
+    public void setBallDoNotClick() {
+        ArrayList<Integer> except1 = new ArrayList<>(AutoGenActivity.selectedNumber);
+        ArrayList<Integer> except2 = new ArrayList<>(AutoGenActivity.exceptNumber);
+
+        if(REQUEST_CODE_DIRECT == 100){
+            if(except2.size() > 0){
+                for(int i=0; i<except2.size(); i++){
+                    TextView view = (TextView) linearLayout.findViewById(except2.get(i));
+                    view.setBackgroundResource(R.mipmap.ball_unselect_with_x);
+                    view.setPaintFlags(3);
+                }
+            }
+        } else if (REQUEST_CODE_DIRECT == 200){
+            if(except1.size() > 0){
+                for(int i=0; i<except1.size(); i++){
+                    TextView view = (TextView) linearLayout.findViewById(except1.get(i));
+                    view.setBackgroundResource(R.mipmap.ball_unselect_with_x);
+                    view.setPaintFlags(3);
+                }
+            }
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        realm.close();
     }
 }

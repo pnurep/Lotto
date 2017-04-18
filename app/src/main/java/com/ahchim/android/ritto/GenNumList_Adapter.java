@@ -120,7 +120,7 @@ public class GenNumList_Adapter extends BaseAdapter {
         Log.e("visibility", "=======================" + results.get(position).getShow());
         if (results.get(position).getShow() == SavedNumber.NONE) {
             results.get(position).setShow(date.equals(results.get(position).getDate()) ? View.GONE : View.VISIBLE);
-            //divider.setVisibility(results.get(position).getShow() == View.VISIBLE ? View.VISIBLE : View.GONE);
+            //divider.setVisibility(((results.get(position).getShow() == View.VISIBLE ) ? View.VISIBLE : View.GONE)); -> 왜 안에서 하면 동작을 안할까
         }
         if(results.get(position).getShow() == View.VISIBLE){
             divider.setVisibility(View.VISIBLE);

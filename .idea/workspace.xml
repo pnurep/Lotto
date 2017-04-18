@@ -9,13 +9,26 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/GenNumList_Adapter.java" line="144" />
-    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/GenNumList_Adapter.java" line="141" />
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/GenNumList_Adapter.java" line="143" />
+    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/GenNumList_Adapter.java" line="140" />
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/GenNumList_Adapter.java" line="142" />
+    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/GenNumList_Adapter.java" line="141" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bc72f02-daec-4491-a798-6154341a81b5" name="Default" comment="" />
+    <list default="true" id="4bc72f02-daec-4491-a798-6154341a81b5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ball_unselect_with_x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/empty_ball_with_x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/taskHistory.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/taskHistory.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/AutoGenActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/AutoGenActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/DirectNumSelectActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/DirectNumSelectActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/GenNumList_Adapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/GenNumList_Adapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_auto_gen.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_auto_gen.xml" />
+    </list>
     <ignored path="ritto.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,25 +61,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GenNumList_Adapter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/GenNumList_Adapter.java">
+      <file leaf-file-name="AutoGenActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/AutoGenActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+            <state relative-caret-position="5486">
+              <caret line="421" column="29" selection-start-line="421" selection-start-column="29" selection-end-line="421" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DirectNumSelectActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/DirectNumSelectActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1492489488000" expanded="false" signature="5250:5358" ph="(v) → {" />
+                <marker date="1492489488000" expanded="false" signature="7397:7489" ph="(v) → {" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeneratedNumListActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/GeneratedNumListActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="652">
-              <caret line="56" column="1" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
-              <folding />
-            </state>
+      <file leaf-file-name="ball_unselect.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ball_unselect.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -2097,7 +2118,6 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/model/GeneratedNumber.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_auto_gen.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_view_item_auto_gen.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/divider_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_generated_num_list.xml" />
@@ -2118,12 +2138,10 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/util/Ascending.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/util/Descending.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/AutoGenActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_direct_num_select.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/LottoService.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/location_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_nation_store.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/DirectNumSelectActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/GeneratedNumListActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/location_item_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/MainActivity.java" />
@@ -2146,6 +2164,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/SearchService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/MapsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/GenNumList_Adapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_auto_gen.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/AutoGenActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/DirectNumSelectActivity.java" />
       </list>
     </option>
   </component>
@@ -2292,6 +2313,24 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mipmap" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ritto" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2422,7 +2461,7 @@
     <property name="SearchEverywhereHistoryKey" value="replace&#9;ACTION&#9;Replace&#10;onini&#9;PSI&#9;JAVA://com.ahchim.android.ritto.daummap.DaumMapActivity#onMapViewInitialized&#10;indent&#9;ACTION&#9;AutoIndentLines&#10; indent&#9;ACTION&#9;AutoIndentLines&#10;dialog&#9;FILE&#9;file:///Users/Gold/Desktop/FastCampus/team_project/source/ritto/app/src/main/java/com/ahchim/android/ritto/MessageDialogFragment.java" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlEditorPanel.WIDTH" value="240" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlEditorPanel.SHOW" value="true" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="FullScreen" value="true" />
@@ -2445,11 +2484,11 @@
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi" />
       <recent name="$PROJECT_DIR$/app/src/main/jinLibs" />
       <recent name="$PROJECT_DIR$/app/libs" />
       <recent name="$PROJECT_DIR$/app/jniLibs" />
       <recent name="$PROJECT_DIR$/app/src/main/assets/location" />
-      <recent name="$PROJECT_DIR$/app/src/main/JniLibs" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -2820,12 +2859,19 @@
       <option name="project" value="LOCAL" />
       <updated>1492253964515</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="edit">
+      <created>1492423343347</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1492423343347</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32506204" sideWeight="0.49499285" order="8" side_tool="false" content_ui="tabs" />
@@ -2833,7 +2879,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7444169" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.75434244" sideWeight="0.49427754" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.81885856" sideWeight="0.49427754" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3941345" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32754344" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32630274" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -2841,7 +2887,7 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32630274" sideWeight="0.50500715" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19098713" sideWeight="0.49007446" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2446352" sideWeight="0.49007446" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32754344" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20958512" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2915,55 +2961,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/app/libs/libDaumMapAndroid.jar!/net/daum/mf/map/n/api/internal/NativeMapGraphicsViewGles.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/MyApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/location/강원/고성군/고성군.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/location/서울/강서구/강서구.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4266">
-          <caret line="237" column="21" selection-start-line="237" selection-start-column="21" selection-end-line="237" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/location/서울/강동구/강동구.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3830">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/location/강원/강릉시/강릉시.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4158">
-          <caret line="231" column="19" selection-start-line="231" selection-start-column="19" selection-end-line="231" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/RestClient.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
@@ -3010,29 +3012,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_direct_num_select.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.2.0/41e67dba73c3347e4503761642c39d0e06ca1f2/retrofit-2.2.0.jar!/retrofit2/Response.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/AutoGenActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5904">
-          <caret line="391" column="34" selection-start-line="391" selection-start-column="34" selection-end-line="391" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3149,14 +3132,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/DirectNumSelectActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1688">
-          <caret line="248" column="95" selection-start-line="248" selection-start-column="95" selection-end-line="248" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/daummap/DaumMapActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -3178,12 +3153,12 @@
         <state relative-caret-position="666">
           <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
           <folding>
-            <element signature="e#224#225#0" expanded="true" />
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#343#344#0" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
-            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#224#225#0" expanded="false" />
+            <element signature="e#254#255#0" expanded="false" />
+            <element signature="e#305#306#0" expanded="false" />
+            <element signature="e#343#344#0" expanded="false" />
+            <element signature="e#390#391#0" expanded="false" />
+            <element signature="e#428#429#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3225,8 +3200,8 @@
         <state relative-caret-position="216">
           <caret line="12" column="22" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="22" />
           <folding>
-            <element signature="e#192#193#0" expanded="true" />
-            <element signature="e#222#223#0" expanded="true" />
+            <element signature="e#192#193#0" expanded="false" />
+            <element signature="e#222#223#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3276,7 +3251,7 @@
         <state relative-caret-position="252">
           <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3296,9 +3271,20 @@
         <state relative-caret-position="2930">
           <caret line="309" column="22" selection-start-line="309" selection-start-column="22" selection-end-line="309" selection-end-column="22" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_auto_gen.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="166" column="33" selection-start-line="166" selection-start-column="33" selection-end-line="166" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/GeneratedNumListActivity.java">
@@ -3311,10 +3297,82 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/GenNumList_Adapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+        <state relative-caret-position="187">
+          <caret line="122" column="137" selection-start-line="122" selection-start-column="137" selection-end-line="122" selection-end-column="137" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/empty_ball.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ball_unselect.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-fragment/25.2.0/support-fragment-25.2.0-sources.jar!/android/support/v4/app/FragmentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="384" column="19" selection-start-line="384" selection-start-column="19" selection-end-line="384" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/appcompat-v7/25.2.0/appcompat-v7-25.2.0-sources.jar!/android/support/v7/app/AppCompatActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="208" column="19" selection-start-line="208" selection-start-column="19" selection-end-line="208" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/empty_ball.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/AutoGenActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5486">
+          <caret line="421" column="29" selection-start-line="421" selection-start-column="29" selection-end-line="421" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_direct_num_select.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/num_select_list.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ahchim/android/ritto/DirectNumSelectActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="89" column="13" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
+          <folding>
+            <marker date="1492489488000" expanded="false" signature="5250:5358" ph="(v) → {" />
+            <marker date="1492489488000" expanded="false" signature="7397:7489" ph="(v) → {" />
           </folding>
         </state>
       </provider>
