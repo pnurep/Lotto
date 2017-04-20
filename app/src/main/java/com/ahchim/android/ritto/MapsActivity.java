@@ -146,8 +146,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         String requestWord = intent.getStringExtra("Map");
         switch (requestWord) {
             case "Around":
-                //TODO : 현재위치를 중심으로한 로또판매점 데이터를 보여준다.
-
                 //위치정보를 가져올 수 있을때
                 if(isGPSEnabled && isGetLocation()){
                     LatLng currentLocation = new LatLng(location.getLatitude(), location.getLongitude());
@@ -224,6 +222,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
 
+        // 다음 Search Api 사용, 현재위치중심으로 검색
         Call<StoreSearch> storeSearchData = searchService.getStoreData(encode.get(0), encode.get(1),  encode.get(2), encode.get(3));
         storeSearchData.enqueue(new Callback<StoreSearch>() {
             @Override

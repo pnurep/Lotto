@@ -16,8 +16,6 @@ public class WinListPojo
 
     private String firstWinamnt;
 
-    private String returnValue;
-
     private String totSellamnt;
 
     private String drwtNo6;
@@ -31,6 +29,8 @@ public class WinListPojo
     private String drwNo;
 
     private String firstPrzwnerCo;
+
+    public WinListPojo(){}
 
     public String getBnusNo ()
     {
@@ -80,16 +80,6 @@ public class WinListPojo
     public void setFirstWinamnt (String firstWinamnt)
     {
         this.firstWinamnt = firstWinamnt;
-    }
-
-    public String getReturnValue ()
-    {
-        return returnValue;
-    }
-
-    public void setReturnValue (String returnValue)
-    {
-        this.returnValue = returnValue;
     }
 
     public String getTotSellamnt ()
@@ -162,9 +152,9 @@ public class WinListPojo
         this.firstPrzwnerCo = firstPrzwnerCo;
     }
 
-    @Override
-    public String toString()
-    {
-        return "ClassPojo [bnusNo = "+bnusNo+", drwtNo3 = "+drwtNo3+", drwtNo2 = "+drwtNo2+", drwtNo1 = "+drwtNo1+", firstWinamnt = "+firstWinamnt+", returnValue = "+returnValue+", totSellamnt = "+totSellamnt+", drwtNo6 = "+drwtNo6+", drwtNo5 = "+drwtNo5+", drwNoDate = "+drwNoDate+", drwtNo4 = "+drwtNo4+", drwNo = "+drwNo+", firstPrzwnerCo = "+firstPrzwnerCo+"]";
-    }
+//    @Override
+//    public String toString()
+//    {
+//        return "ClassPojo [bnusNo = "+bnusNo+", drwtNo3 = "+drwtNo3+", drwtNo2 = "+drwtNo2+", drwtNo1 = "+drwtNo1+", firstWinamnt = "+firstWinamnt+", returnValue = "+ ", totSellamnt = "+totSellamnt+", drwtNo6 = "+drwtNo6+", drwtNo5 = "+drwtNo5+", drwNoDate = "+drwNoDate+", drwtNo4 = "+drwtNo4+", drwNo = "+drwNo+", firstPrzwnerCo = "+firstPrzwnerCo+"]";
+//    }
 }

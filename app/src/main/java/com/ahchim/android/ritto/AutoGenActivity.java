@@ -45,6 +45,12 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
 
     public static ArrayList<Integer> selectedNumber;
     public static ArrayList<Integer> exceptNumber;
+
+    static {
+        selectedNumber = new ArrayList<>();
+        exceptNumber = new ArrayList<>();
+    }
+
     ArrayList<Integer> generatedNumber;
 
     ArrayList<ArrayList<Integer>> allGeneratedNumber;
@@ -72,8 +78,8 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
 
         setContentView(R.layout.activity_auto_gen);
 
-        selectedNumber = new ArrayList<>();
-        exceptNumber = new ArrayList<>();
+//        selectedNumber = new ArrayList<>();
+//        exceptNumber = new ArrayList<>();
         allGeneratedNumber = new ArrayList<>();
         goToSaveNumber = new ArrayList<>();
 

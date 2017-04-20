@@ -43,7 +43,7 @@
                 android:id="@+id/txtLottoDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2017.03.25"
+                tools:text="2017.03.25"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@android:color/white"/>
 
@@ -51,7 +51,7 @@
                 android:id="@+id/txtLottoTimes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="747회차"
+                tools:text="750회차"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/LottoTimesTextSize"/>
 
@@ -66,9 +66,9 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:background="@mipmap/ball_one"
                     android:gravity="center"
-                    android:text="1"
+                    tools:background="@mipmap/ball_one"
+                    tools:text="1"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/LottoBallsTextSize"
                     android:textStyle="bold"/>
@@ -78,9 +78,9 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:background="@mipmap/ball_one"
                     android:gravity="center"
-                    android:text="10"
+                    tools:text="1"
+                    tools:background="@mipmap/ball_two"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/LottoBallsTextSize"
                     android:textStyle="bold"/>
@@ -90,9 +90,9 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:background="@mipmap/ball_two"
+                    tools:background="@mipmap/ball_three"
                     android:gravity="center"
-                    android:text="11"
+                    tools:text="1"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/LottoBallsTextSize"
                     android:textStyle="bold"/>
@@ -102,9 +102,9 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:background="@mipmap/ball_three"
+                    tools:background="@mipmap/ball_three"
                     android:gravity="center"
-                    android:text="21"
+                    tools:text="1"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/LottoBallsTextSize"
                     android:textStyle="bold"/>
@@ -114,9 +114,9 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:background="@mipmap/ball_four"
+                    tools:background="@mipmap/ball_three"
                     android:gravity="center"
-                    android:text="31"
+                    tools:text="1"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/LottoBallsTextSize"
                     android:textStyle="bold"/>
@@ -126,9 +126,9 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:background="@mipmap/ball_five"
+                    tools:background="@mipmap/ball_three"
                     android:gravity="center"
-                    android:text="41"
+                    tools:text="1"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/LottoBallsTextSize"
                     android:textStyle="bold"/>
@@ -148,9 +148,9 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:background="@mipmap/ball_one"
+                    tools:background="@mipmap/ball_three"
                     android:gravity="center"
-                    android:text="1"
+                    tools:text="1"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/LottoBallsTextSize"
                     android:textStyle="bold"/>
@@ -215,11 +215,12 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:gravity="center_vertical"
-
+            android:drawableTop="@mipmap/lotto"
+            android:gravity="center"
             android:padding="16dp"
             android:text="로또번호 만들기"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="15dp"
+            android:textStyle="bold"
             android:textColor="@android:color/white" />
         <!--글씨위에맞는아이콘넣을예정-->
 
@@ -229,10 +230,12 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:gravity="center_vertical"
+            android:drawableTop="@mipmap/list"
+            android:gravity="center"
             android:padding="16dp"
             android:text="로또번호 목록"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="15dp"
+            android:textStyle="bold"
             android:textColor="@android:color/white"/>
 
         <Button
@@ -241,10 +244,12 @@
             android:layout_height="match_parent"
             android:padding="16dp"
             android:text="로또판매점"
-            android:gravity="center_vertical"
+            android:gravity="center"
+            android:drawableTop="@mipmap/store"
             android:textColor="@android:color/white"
             android:layout_weight="1"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="15dp"
+            android:textStyle="bold"
             android:background="@android:color/transparent" />
 
     </LinearLayout>

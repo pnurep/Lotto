@@ -1,10 +1,6 @@
 package com.ahchim.android.ritto;
 
 import android.app.Application;
-
-import net.daum.android.map.MapLibraryConfigImpl;
-import net.daum.mf.map.n.api.NativeMapLibraryLoader;
-
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 
@@ -21,7 +17,7 @@ public class MyApplication extends Application {
         Realm.init(this);
         RealmConfiguration config = new RealmConfiguration.Builder().deleteRealmIfMigrationNeeded().build();
         Realm.setDefaultConfiguration(config);
-//
+
 //        new MapLibraryConfigImpl().getLibraryNames().add("libDaumMapEngineApi");
 
     }

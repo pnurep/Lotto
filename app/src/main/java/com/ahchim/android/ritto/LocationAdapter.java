@@ -7,9 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-
-import net.daum.mf.map.n.api.NativeMapLibraryLoader;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;

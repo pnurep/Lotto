@@ -1,6 +1,7 @@
 package com.ahchim.android.ritto;
 
 import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -10,6 +11,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.PopupMenu;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuInflater;
 import android.view.View;
@@ -24,11 +26,18 @@ import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.ahchim.android.ritto.daummap.DaumMapActivity;
+import com.ahchim.android.ritto.model.WinListPojo;
 import com.ahchim.android.ritto.qrCodeReader.FullScannerFragmentActivity;
 import com.github.aakira.expandablelayout.ExpandableWeightLayout;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
@@ -38,9 +47,16 @@ public class MainActivity extends AppCompatActivity
     private ExpandableWeightLayout mExpandLayout;
 
     LinearLayout ll_main_1, ll_ex_container;
+    //RelativeLayout progress_layout;
 
     Button btnGenerate, btnList, btnStore;
+    TextView lottoNumber1, lottoNumber2, lottoNumber3, lottoNumber4, lottoNumber5, lottoNumber6,
+            lottoNumberPlus, txtLottoTimes, txtLottoDate;
 
+    Retrofit retrofit;
+    WinNumberListService winNumberListService;
+
+    ProgressDialog pd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +95,92 @@ public class MainActivity extends AppCompatActivity
         btnList.setOnClickListener(this);
         btnStore.setOnClickListener(this);
 
+        lottoNumber1 = (TextView) findViewById(R.id.lottoNumber1);
+        lottoNumber2 = (TextView) findViewById(R.id.lottoNumber2);
+        lottoNumber3 = (TextView) findViewById(R.id.lottoNumber3);
+        lottoNumber4 = (TextView) findViewById(R.id.lottoNumber4);
+        lottoNumber5 = (TextView) findViewById(R.id.lottoNumber5);
+        lottoNumber6 = (TextView) findViewById(R.id.lottoNumber6);
+        lottoNumberPlus = (TextView) findViewById(R.id.lottoNumberPlus);
+        txtLottoTimes = (TextView) findViewById(R.id.txtLottoTimes);
+        txtLottoDate = (TextView) findViewById(R.id.txtLottoDate);
+
+        retrofit = new Retrofit.Builder().baseUrl(LottoService.LOTTO_URL).addConverterFactory(GsonConverterFactory.create()).build();
+        winNumberListService = retrofit.create(WinNumberListService.class);
+
+//        progress_layout = (RelativeLayout) findViewById(R.id.progress_layout);
+
+        pd = new ProgressDialog(this);
+        pd.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        pd.setCancelable(false);
+        pd.setMessage("불러오는중...");
+        pd.show();
+
+        getLatestWinNumber();
+
     }
+
+    public void getLatestWinNumber() {
+
+        Call<WinListPojo> getLatestWinData = winNumberListService.getLatestWinData();
+        getLatestWinData.enqueue(new Callback<WinListPojo>() {
+            @Override
+            public void onResponse(Call<WinListPojo> call, Response<WinListPojo> response) {
+                Log.e("성공","=====" + response.body());
+
+                makeNum(response.body().getDrwtNo1(), lottoNumber1);
+                makeNum(response.body().getDrwtNo2(), lottoNumber2);
+                makeNum(response.body().getDrwtNo3(), lottoNumber3);
+                makeNum(response.body().getDrwtNo4(), lottoNumber4);
+                makeNum(response.body().getDrwtNo5(), lottoNumber5);
+                makeNum(response.body().getDrwtNo6(), lottoNumber6);
+                makeNum(response.body().getBnusNo(), lottoNumberPlus);
+
+                txtLottoTimes.setText(response.body().getDrwNo() + "회차");
+                txtLottoDate.setText(response.body().getDrwNoDate());
+
+//                progress_layout.setVisibility(View.GONE);
+                pd.dismiss();
+            }
+
+            @Override
+            public void onFailure(Call<WinListPojo> call, Throwable throwable) {
+                Log.e("실패","=====" + "aa");
+//                progress_layout.setVisibility(View.GONE);
+                pd.dismiss();
+            }
+        });
+
+        //pd.dismiss();
+
+    }
+
+
+    public void makeNum(String num, TextView tv){
+
+        tv.setText(num);
+        tv.setClickable(false);
+
+        int tempNum = Integer.parseInt(num);
+
+        if (tempNum < 11) {
+            tv.setBackgroundResource(R.mipmap.ball_one);
+            tv.setTag(R.mipmap.ball_one);
+        } else if (tempNum < 21) {
+            tv.setBackgroundResource(R.mipmap.ball_two);
+            tv.setTag(R.mipmap.ball_two);
+        } else if (tempNum < 31) {
+            tv.setBackgroundResource(R.mipmap.ball_three);
+            tv.setTag(R.mipmap.ball_three);
+        } else if (tempNum < 41) {
+            tv.setBackgroundResource(R.mipmap.ball_four);
+            tv.setTag(R.mipmap.ball_four);
+        } else {
+            tv.setBackgroundResource(R.mipmap.ball_five);
+            tv.setTag(R.mipmap.ball_five);
+        }
+    }
+
 
     //맵액티비티 로딩
     public void moveToMap(){
@@ -175,6 +276,7 @@ public class MainActivity extends AppCompatActivity
                 tv1.setGravity(Gravity.CENTER_VERTICAL);
                 tv1.setTextColor(Color.WHITE);
                 tv1.setTypeface(Typeface.DEFAULT_BOLD);
+                tv1.setTextSize(19);
                 tv1.setText("번호 자동생성");
                 tv1.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -189,6 +291,7 @@ public class MainActivity extends AppCompatActivity
                 tv2.setGravity(Gravity.CENTER_VERTICAL);
                 tv2.setTextColor(Color.WHITE);
                 tv2.setTypeface(Typeface.DEFAULT_BOLD);
+                tv2.setTextSize(19);
                 tv2.setText("번호 직접입력");
                 tv2.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -211,6 +314,7 @@ public class MainActivity extends AppCompatActivity
                 tv3.setGravity(Gravity.CENTER_VERTICAL);
                 tv3.setTextColor(Color.WHITE);
                 tv3.setTypeface(Typeface.DEFAULT_BOLD);
+                tv3.setTextSize(19);
                 tv3.setText("만든번호목록");
                 tv3.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -226,6 +330,7 @@ public class MainActivity extends AppCompatActivity
                 tv4.setGravity(Gravity.CENTER_VERTICAL);
                 tv4.setTextColor(Color.WHITE);
                 tv4.setTypeface(Typeface.DEFAULT_BOLD);
+                tv4.setTextSize(19);
                 tv4.setText("지난당첨번호");
                 tv4.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -247,6 +352,7 @@ public class MainActivity extends AppCompatActivity
                 tv5.setGravity(Gravity.CENTER_VERTICAL);
                 tv5.setTextColor(Color.WHITE);
                 tv5.setTypeface(Typeface.DEFAULT_BOLD);
+                tv5.setTextSize(19);
                 tv5.setText("주변 판매점");
                 tv5.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -260,6 +366,7 @@ public class MainActivity extends AppCompatActivity
                 tv6.setGravity(Gravity.CENTER_VERTICAL);
                 tv6.setTextColor(Color.WHITE);
                 tv6.setTypeface(Typeface.DEFAULT_BOLD);
+                tv6.setTextSize(19);
                 tv6.setText("전국 판매점");
                 ll_ex_container.removeAllViewsInLayout();
                 ll_ex_container.addView(tv5);

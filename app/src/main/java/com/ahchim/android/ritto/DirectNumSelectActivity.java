@@ -75,9 +75,10 @@ public class DirectNumSelectActivity extends AppCompatActivity {
         btnSelect = (Button) findViewById(R.id.btnSelect_direct);
         linearLayout = (LinearLayout) findViewById(R.id.direct_ll);
         ll_select_result = (LinearLayout) findViewById(R.id.ll_select_result);
-        ll_select_result.setBackgroundColor(Color.YELLOW);
         ll_select_result.setGravity(Gravity.CENTER_HORIZONTAL);
         textView5 = (TextView) findViewById(R.id.textView5);
+
+        viewInit(); // 동적뷰초기세팅
 
         if (REQUEST_CODE_DIRECT == 300) {
             btnSelect.setText("번호저장!");
@@ -92,10 +93,8 @@ public class DirectNumSelectActivity extends AppCompatActivity {
             }
             ll_select_result.setVisibility(View.GONE);
             switchLimit = 5;
+            setBallDoNotClick();
         }
-
-        viewInit();
-        setBallDoNotClick();
 
         realm = Realm.getDefaultInstance();
         ascending = new Ascending();

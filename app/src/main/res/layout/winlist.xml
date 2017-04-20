@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp">
+
+        <TextView
+            android:id="@+id/tv_round"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="15dp"
+            tools:text = "Round 750"/>
+
+        <TextView
+            android:id="@+id/tv_when"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="15dp"
+            tools:text="2017-04-05"/>
+
+        <TextView
+            android:id="@+id/tv_winPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="15dp"
+            tools:text="77000000 Won"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_winlist_inner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!--여기에 로또넘버 동적생성을...
+        해보았으나 onBindViewHolder에서 계속 추가 하는 방식으로는 
+        재활용할때마다 컨테이너의 차일드뷰를 삭제해줘야 뷰가 계속 쌓이지 않는다 -> 비효율 -->
+
+        <TextView
+            android:id="@+id/win_num1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@mipmap/ball_one"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/LottoBallsTextSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/win_num2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@mipmap/ball_one"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/LottoBallsTextSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/win_num3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@mipmap/ball_one"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/LottoBallsTextSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/win_num4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@mipmap/ball_one"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/LottoBallsTextSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/win_num5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@mipmap/ball_one"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/LottoBallsTextSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/win_num6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@mipmap/ball_one"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/LottoBallsTextSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/win_plus"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_add_black_36dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/win_num7"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@mipmap/ball_one"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/LottoBallsTextSize"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>
