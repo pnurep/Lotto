@@ -18,7 +18,6 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.ahchim.android.ritto.model.storesearch.Channel;
 import com.ahchim.android.ritto.model.storesearch.Item;
 import com.ahchim.android.ritto.model.storesearch.StoreSearch;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -50,7 +49,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     // GPS정보 업데이트 거리
     private static final long MIN_DISTANCE_GPS_DATA_UPDATE = 10;
     // GPS정보 업데이트 시간 1/1000
-    private static final long MIN_TIME_UPDATE = 1000 * 60 * 1;
+    private static final long MIN_TIME_UPDATE = 3000;
+//    private static final long MIN_TIME_UPDATE = 10000 * 60 * 1;
+
 
     protected LocationManager locationManager;
 
@@ -64,11 +65,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     boolean isGetLocation = false;
 
     Location location;
+    LatLng currentLocation;
+    Marker currentMarker;
+    MarkerOptions currentMarkOptions;
+
     double gps_lat;
     double gps_lng;
 
     private GoogleMap mMap;
     Intent intent;
+    String requestWord = "";
 
     Retrofit retrofit;
     SearchService searchService;
@@ -79,13 +85,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         setContentView(R.layout.activity_maps);
 
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
-// set your desired log level
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
 
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
-// add your other interceptors …
 
-// add logging as last interceptor
         httpClient.addInterceptor(logging);
 
         retrofit = new Retrofit.Builder()
@@ -94,7 +97,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .client(httpClient.build())
                 .build();
         searchService = retrofit.create(SearchService.class);
-
 
 
         int permissionChk = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION);
@@ -143,19 +145,29 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
 
 
-        String requestWord = intent.getStringExtra("Map");
+        requestWord = intent.getStringExtra("Map");
         switch (requestWord) {
             case "Around":
                 //위치정보를 가져올 수 있을때
                 if(isGPSEnabled && isGetLocation()){
-                    LatLng currentLocation = new LatLng(location.getLatitude(), location.getLongitude());
-                    mMap.addMarker(new MarkerOptions().position(currentLocation).title("현재위치")).showInfoWindow();
+
+                    Log.e("위치정보를 가져올 수 있을때","===================");
+
+                    currentLocation = new LatLng(gps_lat, gps_lng);
+                    currentMarkOptions = new MarkerOptions().position(currentLocation);
+                    currentMarker = mMap.addMarker(currentMarkOptions.title("현재위치"));
+                    currentMarker.showInfoWindow();
+
+                    //mMap.addMarker(options.title("현재위치")).showInfoWindow();
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(currentLocation));
                     mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, 16));
                     storeSrchRtrft();
 
                 //위치정보를 가져올 수 없을때
                 } else {
+
+                    Log.e("위치정보를 가져올 수 없을때","===================");
+
                     LatLng defaultLocation = new LatLng(37.515647, 127.021401);
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(defaultLocation));
                     mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(defaultLocation, 16));
@@ -196,7 +208,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     public void storeSrchRtrft() {
 
-        String apiLocation = location.getLatitude() + "," + location.getLongitude() + "";
+        String apiLocation = gps_lat + "," + gps_lng + "";
         Log.e("apiLocation","==========" + apiLocation);
 
         Map<String, String> getQuery = new HashMap<>();
@@ -251,7 +263,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     options.snippet(address + pNum);
                     mMap.addMarker(options);
                 }
-
             }
 
             @Override
@@ -261,7 +272,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
 
     }
-
 
 
     public void setMap() {
@@ -279,7 +289,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             isNetworkEnabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
 
             if (!isGPSEnabled && !isNetworkEnabled) {
-
+                Log.e("dkdkdkdkd","=======================================");
             } else {
                 this.isGetLocation = true;
 
@@ -319,7 +329,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     }
                 }
             }
-
         } catch (Exception e){
             e.printStackTrace();
         }
@@ -390,10 +399,31 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         alertDialog.show();
     }
 
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 
     @Override
     public void onLocationChanged(Location location) {
+        gps_lat = location.getLatitude();
+        gps_lng = location.getLongitude();
+
+        Log.e("requestWord == Around","==" + requestWord);
+
+        switch (requestWord){
+            case "Around" :
+                Log.e("requestWord == Around","=========================");
+                LatLng latLng = new LatLng(gps_lat, gps_lng);
+                currentMarker.setPosition(latLng);
+                mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16));
+                storeSrchRtrft();
+                break;
+            case "Nation" :
+                Log.e("requestWord == Nation","=========================");
+                break;
+        }
 
     }
 

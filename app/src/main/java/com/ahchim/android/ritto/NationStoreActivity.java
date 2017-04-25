@@ -149,7 +149,7 @@ public class NationStoreActivity extends AppCompatActivity {
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            Toast.makeText(NationStoreActivity.this, "가져왔다!", Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(NationStoreActivity.this, "가져왔다!", Toast.LENGTH_SHORT).show();
                         }
                     }, 700);
                 }
@@ -163,7 +163,7 @@ public class NationStoreActivity extends AppCompatActivity {
                     // 전체리스트아이템 개수보다 같거나 클때가 마지막까지 스크롤된 상태가 된다.
                     if(totalItemCount > 0 && firstVisibleItem + visibleItemCount == totalItemCount){
                         requestPage++;
-                        Toast.makeText(NationStoreActivity.this, "마지막포지션 도달!", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(NationStoreActivity.this, "마지막포지션 도달!", Toast.LENGTH_SHORT).show();
                         Log.e("firstVisibleItem","===" + firstVisibleItem);
                         Log.e("visibleItemCount","===" + visibleItemCount);
                         Log.e("totalItemCount","===" + totalItemCount);

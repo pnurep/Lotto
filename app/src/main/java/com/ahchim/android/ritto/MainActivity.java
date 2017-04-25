@@ -195,6 +195,27 @@ public class MainActivity extends AppCompatActivity
         startActivity(intent);
     }
 
+    public void moveToAutoGen(){
+        Intent intent = new Intent(MainActivity.this, AutoGenActivity.class);
+        startActivity(intent);
+    }
+
+    public void moveToDirectGen(){
+        Intent intent = new Intent(MainActivity.this, DirectNumSelectActivity.class);
+        intent.putExtra("REQUEST_CODE", 300);
+        startActivity(intent);
+    }
+
+    public void moveToGeneratedNumList(){
+        Intent intent = new Intent(MainActivity.this, GeneratedNumListActivity.class);
+        startActivity(intent);
+    }
+
+    public void moveToPastWinNum(){
+        Intent intent = new Intent(MainActivity.this, PastWinNumActivity.class);
+        startActivity(intent);
+    }
+
 
     @Override
     public void onBackPressed() {
@@ -214,6 +235,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    //메뉴아이템
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -225,11 +247,35 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    //네비게이션 메뉴 아이템
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        int id = item.getItemId();
 
+        switch (item.getItemId()){
+            case R.id.action_random_number :
+                moveToAutoGen();
+                break;
+            case R.id.action_input_number :
+                moveToDirectGen();
+                break;
+            case R.id.action_generated_numbers :
+                moveToGeneratedNumList();
+                break;
+            case R.id.action_past_winning_numbers :
+                moveToPastWinNum();
+                break;
+            case R.id.action_store_around :
+                moveToMap();
+                break;
+            case R.id.action_store_nationwide :
+                moveToNation();
+                break;
+        }
+
+
+
+//        int id = item.getItemId();
 //        if (id == R.id.nav_camera) {
 //            // Handle the camera action
 //        } else if (id == R.id.nav_gallery) {
@@ -281,8 +327,7 @@ public class MainActivity extends AppCompatActivity
                 tv1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(MainActivity.this, AutoGenActivity.class);
-                        startActivity(intent);
+                        moveToAutoGen();
                     }
                 });
 
@@ -296,9 +341,7 @@ public class MainActivity extends AppCompatActivity
                 tv2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(MainActivity.this, DirectNumSelectActivity.class);
-                        intent.putExtra("REQUEST_CODE", 300);
-                        startActivity(intent);
+                        moveToDirectGen();
                     }
                 });
 
@@ -319,8 +362,7 @@ public class MainActivity extends AppCompatActivity
                 tv3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(MainActivity.this, GeneratedNumListActivity.class);
-                        startActivity(intent);
+                        moveToGeneratedNumList();
                     }
                 });
 
@@ -335,8 +377,7 @@ public class MainActivity extends AppCompatActivity
                 tv4.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(MainActivity.this, PastWinNumActivity.class);
-                        startActivity(intent);
+                        moveToPastWinNum();
                     }
                 });
 

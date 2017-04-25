@@ -136,12 +136,14 @@ public class GenNumList_Adapter extends BaseAdapter {
         checkBox.setClickable(false);
         checkBox.setVisibility(View.GONE);
 
-        num1.setText(results.get(position).getNum1() + "");
-        num2.setText(results.get(position).getNum2() + "");
-        num3.setText(results.get(position).getNum3() + "");
-        num4.setText(results.get(position).getNum4() + "");
-        num5.setText(results.get(position).getNum5() + "");
-        num6.setText(results.get(position).getNum6() + "");
+
+        makeNum(results.get(position).getNum1() + "", num1);
+        makeNum(results.get(position).getNum2() + "", num2);
+        makeNum(results.get(position).getNum3() + "", num3);
+        makeNum(results.get(position).getNum4() + "", num4);
+        makeNum(results.get(position).getNum5() + "", num5);
+        makeNum(results.get(position).getNum6() + "", num6);
+
         date = results.get(position).getDate();
 
         realm.commitTransaction();
@@ -150,35 +152,34 @@ public class GenNumList_Adapter extends BaseAdapter {
     }
 
 
+    public void makeNum(String num, TextView tv){
+
+        tv.setText(num);
+        tv.setClickable(false);
+
+        int tempNum = Integer.parseInt(num);
+
+        if (tempNum < 11) {
+            tv.setBackgroundResource(R.mipmap.ball_one);
+            tv.setTag(R.mipmap.ball_one);
+        } else if (tempNum < 21) {
+            tv.setBackgroundResource(R.mipmap.ball_two);
+            tv.setTag(R.mipmap.ball_two);
+        } else if (tempNum < 31) {
+            tv.setBackgroundResource(R.mipmap.ball_three);
+            tv.setTag(R.mipmap.ball_three);
+        } else if (tempNum < 41) {
+            tv.setBackgroundResource(R.mipmap.ball_four);
+            tv.setTag(R.mipmap.ball_four);
+        } else {
+            tv.setBackgroundResource(R.mipmap.ball_five);
+            tv.setTag(R.mipmap.ball_five);
+        }
+    }
+
+
     public static class Viewholder {
         public TextView textView;
     }
-
-//    private View getNumView (int position, View convertView, ViewGroup parent) {
-//
-//        if(convertView == null){
-//            convertView = inflater.inflate(num_layout, parent, false);
-//        }
-//
-//        CheckBox checkBox = (CheckBox) convertView.findViewById(R.id.checkBox);
-//        TextView num1 = (TextView) convertView.findViewById(R.id.num1);
-//        TextView num2 = (TextView) convertView.findViewById(R.id.num2);
-//        TextView num3 = (TextView) convertView.findViewById(R.id.num3);
-//        TextView num4 = (TextView) convertView.findViewById(R.id.num4);
-//        TextView num5 = (TextView) convertView.findViewById(R.id.num5);
-//        TextView num6 = (TextView) convertView.findViewById(R.id.num6);
-//
-//        checkBox.setClickable(false);
-//        checkBox.setVisibility(View.GONE);
-//        num1.setText(results.get(position).getNum1() + "");
-//        num2.setText(results.get(position).getNum2() + "");
-//        num3.setText(results.get(position).getNum3() + "");
-//        num4.setText(results.get(position).getNum4() + "");
-//        num5.setText(results.get(position).getNum5() + "");
-//        num6.setText(results.get(position).getNum6() + "");
-//
-//        return convertView;
-//    }
-
 
 }

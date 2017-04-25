@@ -31,10 +31,6 @@
                 android:title="지난 당첨번호"
                 app:showAsAction="never" />
 
-            <item
-                android:id="@+id/action_purchased_numbers"
-                android:title="구입 번호 목록 &amp; 당첨확인"
-                app:showAsAction="never" />
         </menu>
     </item>
 

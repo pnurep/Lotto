@@ -64,6 +64,8 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
     ListView listView;
     EditText howManyNum;
 
+    ListViewAdapter adapter;
+
     Realm realm;
 
     @Override
@@ -80,8 +82,11 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
 
 //        selectedNumber = new ArrayList<>();
 //        exceptNumber = new ArrayList<>();
-        allGeneratedNumber = new ArrayList<>();
-        goToSaveNumber = new ArrayList<>();
+        if(allGeneratedNumber == null)
+            allGeneratedNumber = new ArrayList<>();
+
+        if(goToSaveNumber == null)
+            goToSaveNumber = new ArrayList<>();
 
         ll_inner_container = (LinearLayout) findViewById(R.id.ll_inner_container);
         ll_inner_container_except = (LinearLayout) findViewById(R.id.ll_inner_container_except);
@@ -105,7 +110,6 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
         ascending = new Ascending();
 
         realm = Realm.getDefaultInstance();
-
     }
 
     @Override
@@ -126,6 +130,15 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
             case R.id.btnSave :
                 if(goToSaveNumber.size() > 0){
                     saveGenNum(goToSaveNumber);
+                    Toast.makeText(this, "선택한 번호가 저장되었습니다!", Toast.LENGTH_SHORT).show();
+                    allGeneratedNumber.clear();
+                    goToSaveNumber.clear();
+
+                    adapter.notifyDataSetChanged();
+
+                    Log.e("allGeneratedNumber","saved" + allGeneratedNumber.size());
+                    Log.e("goToSaveNumber","saved" + goToSaveNumber.size());
+
                 } else {
                     if(allGeneratedNumber.size() <= 0){
                         Toast.makeText(this, "번호를 생성해 주세요!", Toast.LENGTH_SHORT).show();
@@ -137,6 +150,7 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
 
             case R.id.btnGen1 :
                 goToSaveNumber.clear();
+
                 int howMany = 0;
 
                 //문자 입력 예방 예외처리
@@ -148,7 +162,7 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
 
                 if( howMany > 0 && howMany < 6){
                     generateRandomNumber(selectedNumber, exceptNumber, howMany-1);
-                    final ListViewAdapter adapter = new ListViewAdapter(this, R.layout.list_view_item_auto_gen, howMany , allGeneratedNumber);
+                    adapter = new ListViewAdapter(this, R.layout.list_view_item_auto_gen, howMany , allGeneratedNumber);
                     adapter.notifyDataSetChanged();
                     listView.setAdapter(adapter);
 
@@ -334,7 +348,7 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
         LayoutInflater inflater;
         int layout;
         int howMany;
-        ArrayList<ArrayList<Integer>> allGeneratedNum = new ArrayList<>();
+        ArrayList<ArrayList<Integer>> allGeneratedNum;
 
         public ListViewAdapter(Context context, int layout, int howMany, ArrayList<ArrayList<Integer>> allGeneratedNum){
             this.context = context;
@@ -363,30 +377,66 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
 
-            if(convertView == null){
-                convertView = inflater.inflate(layout, parent, false);
+            if (this.allGeneratedNum.size() > 0) {
+
+                if (convertView == null) {
+                    convertView = inflater.inflate(layout, parent, false);
+                }
+
+                Log.e("allGenNum.size()>0","");
+
+                CheckBox checkBox = (CheckBox) convertView.findViewById(R.id.checkBox);
+                //checkBox.setOnCheckedChangeListener(AutoGenActivity.this);
+                checkBox.setId(position);
+
+                TextView num1 = (TextView) convertView.findViewById(R.id.num1);
+                TextView num2 = (TextView) convertView.findViewById(R.id.num2);
+                TextView num3 = (TextView) convertView.findViewById(R.id.num3);
+                TextView num4 = (TextView) convertView.findViewById(R.id.num4);
+                TextView num5 = (TextView) convertView.findViewById(R.id.num5);
+                TextView num6 = (TextView) convertView.findViewById(R.id.num6);
+
+                makeNum(allGeneratedNum.get(position).get(0) + "", num1);
+                makeNum(allGeneratedNum.get(position).get(1) + "", num2);
+                makeNum(allGeneratedNum.get(position).get(2) + "", num3);
+                makeNum(allGeneratedNum.get(position).get(3) + "", num4);
+                makeNum(allGeneratedNum.get(position).get(4) + "", num5);
+                makeNum(allGeneratedNum.get(position).get(5) + "", num6);
+
+                //allGeneratedNum.get(position).get(0) -> 이게 중요해.........
+                //num1.setText(allGeneratedNum.get(position).get(0) + "");
+            }else{
+                System.out.println("allGenNum.size()<0");
+                return new View(getBaseContext()); // 하... 이거 참..
             }
-
-            CheckBox checkBox = (CheckBox) convertView.findViewById(R.id.checkBox);
-            //checkBox.setOnCheckedChangeListener(AutoGenActivity.this);
-            checkBox.setId(position);
-
-            TextView num1 = (TextView) convertView.findViewById(R.id.num1);
-            TextView num2 = (TextView) convertView.findViewById(R.id.num2);
-            TextView num3 = (TextView) convertView.findViewById(R.id.num3);
-            TextView num4 = (TextView) convertView.findViewById(R.id.num4);
-            TextView num5 = (TextView) convertView.findViewById(R.id.num5);
-            TextView num6 = (TextView) convertView.findViewById(R.id.num6);
-
-            //allGeneratedNum.get(position).get(0) -> 이게 중요해.........
-            num1.setText(allGeneratedNum.get(position).get(0) + "");
-            num2.setText(allGeneratedNum.get(position).get(1) + "");
-            num3.setText(allGeneratedNum.get(position).get(2) + "");
-            num4.setText(allGeneratedNum.get(position).get(3) + "");
-            num5.setText(allGeneratedNum.get(position).get(4) + "");
-            num6.setText(allGeneratedNum.get(position).get(5) + "");
-
             return convertView;
+
+        }
+
+
+        public void makeNum(String num, TextView tv){
+
+            tv.setText(num);
+            tv.setClickable(false);
+
+            int tempNum = Integer.parseInt(num);
+
+            if (tempNum < 11) {
+                tv.setBackgroundResource(R.mipmap.ball_one);
+                tv.setTag(R.mipmap.ball_one);
+            } else if (tempNum < 21) {
+                tv.setBackgroundResource(R.mipmap.ball_two);
+                tv.setTag(R.mipmap.ball_two);
+            } else if (tempNum < 31) {
+                tv.setBackgroundResource(R.mipmap.ball_three);
+                tv.setTag(R.mipmap.ball_three);
+            } else if (tempNum < 41) {
+                tv.setBackgroundResource(R.mipmap.ball_four);
+                tv.setTag(R.mipmap.ball_four);
+            } else {
+                tv.setBackgroundResource(R.mipmap.ball_five);
+                tv.setTag(R.mipmap.ball_five);
+            }
         }
     }
 
@@ -420,6 +470,7 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
                 Log.e("getNumber","================" + savedNumber.getNum5());
                 Log.e("getNumber","================" + savedNumber.getNum6());
             }
+
             realm.commitTransaction();
         }
     }
