@@ -17,7 +17,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ahchim.android.ritto.R;
-import com.ahchim.android.ritto.WebActivity;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;
 import java.util.ArrayList;

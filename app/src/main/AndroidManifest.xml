@@ -42,32 +42,28 @@
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
-            android:name=".WebActivity"
+            android:name=".qrCodeReader.WebActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
-            android:name=".AutoGenActivity"
+            android:name=".generate_number.AutoGenActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
         <activity
-            android:name=".GeneratedNumListActivity"
+            android:name=".number_list.GeneratedNumListActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
-            android:name=".PastWinNumActivity"
+            android:name=".number_list.PastWinNumActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".PurchasedNumActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".DirectNumSelectActivity"
+            android:name=".generate_number.DirectNumSelectActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity
-            android:name=".NationStoreActivity"
+            android:name=".maps.NationStoreActivity"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation|screenSize" />
 
@@ -85,7 +81,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".maps.MapsActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
             android:label="@string/title_activity_maps"></activity>
