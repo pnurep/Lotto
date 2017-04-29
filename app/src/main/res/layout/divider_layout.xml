@@ -3,7 +3,8 @@
     android:id="@+id/ll_container_divide"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants">
 
     <TextView
         android:id="@+id/tv_divider"
@@ -27,11 +28,12 @@
 
         <CheckBox
             android:id="@+id/check"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:focusable="true"
             android:layout_gravity="center_vertical"
             android:layout_marginRight="10dp"
-            android:visibility="gone" />
+            android:visibility="visible" />
 
         <TextView
             android:id="@+id/num1_adapter"

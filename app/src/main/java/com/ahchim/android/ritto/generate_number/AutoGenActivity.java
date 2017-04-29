@@ -174,6 +174,9 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
                             for(int i=listView.getAdapter().getCount()-1; i>=0; i--){
                                 Log.e("ListView","===========================" + listView);
                                 CheckBox check = (CheckBox) listView.findViewById(i);
+
+                                Log.e("check","===========================" + check);
+
                                 check.setVisibility(View.VISIBLE);
                                 check.setFocusable(false);
                                 check.setClickable(false);

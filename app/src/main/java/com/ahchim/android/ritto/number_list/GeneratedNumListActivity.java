@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.CheckBox;
 import android.widget.ListView;
 
 import com.ahchim.android.ritto.R;
@@ -19,7 +20,7 @@ import java.util.ArrayList;
 import io.realm.Realm;
 import io.realm.RealmResults;
 
-public class GeneratedNumListActivity extends AppCompatActivity implements ListView.MultiChoiceModeListener, ListView.OnItemClickListener {
+public class GeneratedNumListActivity extends AppCompatActivity {
 
     ListView listView;
     Realm realm;
@@ -40,13 +41,20 @@ public class GeneratedNumListActivity extends AppCompatActivity implements ListV
         importSaveData();
 
         listView = (ListView) findViewById(R.id.list1);
-        listView.setMultiChoiceModeListener(this);
-        listView.setOnItemClickListener(this);
+
         GenNumList_Adapter adapter = new GenNumList_Adapter(this, searchResult, R.layout.divider_layout);
         adapter.notifyDataSetChanged();
         listView.setAdapter(adapter);
 
-
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.e("클릭리스너","들어오니? ===================");
+                CheckBox check = (CheckBox) view.findViewById(R.id.check);
+                check.setChecked(true);
+                Log.e("",""+check.isChecked());
+            }
+        });
 
     }
 
@@ -66,42 +74,5 @@ public class GeneratedNumListActivity extends AppCompatActivity implements ListV
     }
 
 
-    @Override
-    public void onItemCheckedStateChanged(ActionMode mode, int position, long id, boolean checked) {
-        Log.e("ActionMode","==================" + mode);
-        Log.e("position","==================" + position);
-        Log.e("id","==================" + id);
-        Log.e("checked","==================" + checked);
-    }
 
-    @Override
-    public boolean onCreateActionMode(ActionMode mode, Menu menu) {
-        Log.e("ActionMode","==================" + mode);
-        Log.e("menu","==================" + menu);
-        return false;
-    }
-
-    @Override
-    public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
-        Log.e("ActionMode","==================" + mode);
-        Log.e("menu","==================" + menu);
-        return false;
-    }
-
-    @Override
-    public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
-        Log.e("ActionMode","==================" + mode);
-        Log.e("MenuItem","==================" + item);
-        return false;
-    }
-
-    @Override
-    public void onDestroyActionMode(ActionMode mode) {
-        Log.e("ActionMode","==================" + mode);
-    }
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-    }
 }

@@ -80,13 +80,6 @@ public class GenNumList_Adapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-//        switch (getItemViewType(position)){
-//            case VIEW_TYPE_DATE :
-//                return getDateView(position, convertView, parent);
-//            case VIEW_TYPE_NUM :
-//                return getNumView(position, convertView, parent);
-//        }
-
         return getDateView(position, convertView, parent);
     }
 
@@ -94,18 +87,11 @@ public class GenNumList_Adapter extends BaseAdapter {
 
         realm.beginTransaction();
 
-        //Viewholder viewholder = null;
-
         if (convertView == null) {
             convertView = inflater.inflate(divide_layout, parent, false);
-            //viewholder = new Viewholder();
-            //viewholder.textView = (TextView) convertView.findViewWithTag("visible");
-            //convertView.setTag(viewholder);
         } else {
-            //viewholder = (Viewholder) convertView.getTag();
-        }
 
-        //SavedNumber saved = results.get(position);
+        }
 
         CheckBox checkBox = (CheckBox) convertView.findViewById(R.id.check);
         TextView divider = (TextView) convertView.findViewById(R.id.tv_divider);
@@ -129,11 +115,14 @@ public class GenNumList_Adapter extends BaseAdapter {
 
         divider.setText(results.get(position).getDate());
 
-        Log.e("date", "=======================" + date);
-        Log.e("getdate", "=======================" + results.get(position).getDate());
-        Log.e("visibility", "=======================" + results.get(position).getShow());
-        checkBox.setClickable(false);
-        checkBox.setVisibility(View.GONE);
+//        Log.e("date", "=======================" + date);
+//        Log.e("getdate", "=======================" + results.get(position).getDate());
+//        Log.e("visibility", "=======================" + results.get(position).getShow());
+
+        Log.e("position", "=======================" + position);
+
+        //checkBox.setId(position);
+        //checkBox.setVisibility(View.GONE);
 
 
         makeNum(results.get(position).getNum1() + "", num1);
@@ -175,10 +164,4 @@ public class GenNumList_Adapter extends BaseAdapter {
             tv.setTag(R.mipmap.ball_five);
         }
     }
-
-
-    public static class Viewholder {
-        public TextView textView;
-    }
-
 }
