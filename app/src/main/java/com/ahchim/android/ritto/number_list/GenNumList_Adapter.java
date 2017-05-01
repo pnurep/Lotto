@@ -119,7 +119,7 @@ public class GenNumList_Adapter extends BaseAdapter {
 //        Log.e("getdate", "=======================" + results.get(position).getDate());
 //        Log.e("visibility", "=======================" + results.get(position).getShow());
 
-        Log.e("position", "=======================" + position);
+        //Log.e("position", "=======================" + position);
 
         //checkBox.setId(position);
         //checkBox.setVisibility(View.GONE);

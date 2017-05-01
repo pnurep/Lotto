@@ -30,7 +30,7 @@
             android:id="@+id/check"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:focusable="true"
+            android:focusable="false"
             android:layout_gravity="center_vertical"
             android:layout_marginRight="10dp"
             android:visibility="visible" />

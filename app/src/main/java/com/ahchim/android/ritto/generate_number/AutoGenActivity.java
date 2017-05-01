@@ -418,7 +418,7 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
                 //num1.setText(allGeneratedNum.get(position).get(0) + "");
             }else{
                 System.out.println("allGenNum.size()<0");
-                return new View(getBaseContext()); // 하... 이거 참..
+                return new View(getBaseContext()); // 하... 이거 참...
             }
             return convertView;
 
