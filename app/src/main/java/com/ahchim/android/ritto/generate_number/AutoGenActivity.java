@@ -369,7 +369,7 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
             inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
 
-        // 깊은 깨달음! -> getCount() 함수의 리턴값으로 정해준 수가 -> getView()를 그 수만큼 실행시킨다!!!
+
         @Override
         public int getCount() {
             return howMany;
@@ -494,15 +494,5 @@ public class AutoGenActivity extends AppCompatActivity implements View.OnClickLi
         selectedNumber.clear();
         exceptNumber.clear();
     }
-
-    //제네레이트 된 번호들을 모은다. 최대 5개    -->  개 뻘짓의 산물
-//    public class GeneratedItemNumber {
-//        ArrayList<Integer> item;
-//
-//        public GeneratedItemNumber(ArrayList<Integer> items) {
-//            item = new ArrayList<>();
-//            item = items;
-//        }
-//    }
 
 }
